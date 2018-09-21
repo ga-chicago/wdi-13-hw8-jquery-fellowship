@@ -248,12 +248,14 @@ theBalrog();
 const hornOfGondor = () => {
 
   // 1. create a pop-up alert that the horn of gondor has been blown
-
+  alert("The Horn of Gondor sounds!");
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
-
+  $('li:contains("Boromir")').html('<strike>Boromir</strike>')
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
-
+  $('li:contains("Uruk-hai")').remove();
 };
+
+hornOfGondor();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
