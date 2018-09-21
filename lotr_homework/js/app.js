@@ -57,7 +57,7 @@ const makeMiddleEarth = () => {
   //   3b. gives each land article an `id` tag of the corresponding land name
     article.attr('id',lands[i]);
   //   3c. includes an h1 with the name of the land inside each land article
-    article.text(lands[i]);
+    article.append('<h1>' + lands[i] + '</h1>');
   //   3d. appends each land to the middle-earth section
     section.append(article);
   }
@@ -166,7 +166,7 @@ const makeBuddies = () => {
 const leaveTheShire = () => {
 
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
-
+  $('#Rivendell').append($('#The-Shire').children('ul'));
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
 };
