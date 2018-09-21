@@ -6,31 +6,31 @@ console.log("---------------")
 // ==============================
 
 const hobbits = [
-  "Frodo Baggins",
-  "Samwise 'Sam' Gamgee",
-  "Meriadoc 'Merry' Brandybuck",
-  "Peregrin 'Pippin' Took"
+"Frodo Baggins",
+"Samwise 'Sam' Gamgee",
+"Meriadoc 'Merry' Brandybuck",
+"Peregrin 'Pippin' Took"
 ];
 
 const buddies = [
-  "Gandalf the Grey",
-  "Legolas",
-  "Gimli",
-  "Strider",
-  "Boromir"
+"Gandalf the Grey",
+"Legolas",
+"Gimli",
+"Strider",
+"Boromir"
 ];
 
 const baddies = [
-  "Sauron",
-  "Saruman",
-  "The Uruk-hai",
-  "Orcs"
+"Sauron",
+"Saruman",
+"The Uruk-hai",
+"Orcs"
 ];
 
 const lands = [
-  "The-Shire",
-  "Rivendell",
-  "Mordor"
+"The-Shire",
+"Rivendell",
+"Mordor"
 ];
 
 // ====================================
@@ -56,20 +56,25 @@ const makeMiddleEarth = () => {
 
   // 3. use a for loop to iterate over the lands array that does the following:
 
-  for (i = 0; i < lands.length; i++){
+  for (let i = 0; i < lands.length; i++){
 
-  //   3a. creates an article tag (there should be one for each land when the loop is done)
+    //   3a. creates an article tag (there should be one for each land when the loop is done)
+   
+    const $article = $('<article/>');
 
-  const $article = $('<article/>');
+    //   3b. gives each land article an `id` tag of the corresponding land name
+   
+    $article.attr('id', lands[i]);
 
-  //   3b. gives each land article an `id` tag of the corresponding land name
-  //   3c. includes an h1 with the name of the land inside each land article
- 
-  $article.attr('id', lands[i]).append('<h1/>').text(lands[i]);
+    //   3c. includes an h1 with the name of the land inside each land article
+    
+    const $h1 = $('<h1/>')
+    $h1.text(lands[i]);
+    $article.append($h1);
 
-  //   3d. appends each land to the middle-earth section
+    //   3d. appends each land to the middle-earth section
 
-  $section.append($article);
+    $section.append($article);
   }
 
 };
@@ -94,7 +99,19 @@ const makeHobbits = () => {
 
   // hint: get 'The-Shire' by using its id
 
+  $ul = $('<ul/>');
+
+  for (let i = 0; i < hobbits.length; i++){
+
+    const $li = $('<li class="hobbit"/>').text(hobbits[i]);
+    $ul.append($li);
+  }
+
+  $('#The-Shire').append($ul);
+
 };
+
+makeHobbits();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
@@ -104,13 +121,13 @@ const makeHobbits = () => {
 // ============
 const keepItSecretKeepItSafe = () => {
 
-  // 1. create an empty div with an id of 'the-ring'
+// 1. create an empty div with an id of 'the-ring'
 
-  // 2. add the ring as a child of Frodo
+// 2. add the ring as a child of Frodo
 
-  // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
+// hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
 
-  // when you think you have given Frodo the ring, check in your Elements tab
+// when you think you have given Frodo the ring, check in your Elements tab
 
 };
 
@@ -122,11 +139,11 @@ const keepItSecretKeepItSafe = () => {
 // ============
 const makeBaddies = () => {
 
-  // 1. display an unordered list of baddies in Mordor
+// 1. display an unordered list of baddies in Mordor
 
-  // 2. give each of the baddies a class of "baddy"
+// 2. give each of the baddies a class of "baddy"
 
-  // 3. remember to append them to Mordor
+// 3. remember to append them to Mordor
 };
 
 // COMMIT YOUR WORK
@@ -137,11 +154,11 @@ const makeBaddies = () => {
 // ============
 const makeBuddies = () => {
 
-  // 1. create an aside tag and append it to middle-earth below mordor
+// 1. create an aside tag and append it to middle-earth below mordor
 
-  // 2. display an unordered list of buddies in the aside
+// 2. display an unordered list of buddies in the aside
 
-  // 3. give each of the buddies a class of "buddy"
+// 3. give each of the buddies a class of "buddy"
 
 };
 
@@ -153,9 +170,9 @@ const makeBuddies = () => {
 // ============
 const leaveTheShire = () => {
 
-  // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
+// 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
 
-  // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
+// hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
 };
 
@@ -167,9 +184,9 @@ const leaveTheShire = () => {
 // ============
 const beautifulStranger = () => {
 
-  // 1. change the buddy 'Strider' textnode to "Aragorn"
+// 1. change the buddy 'Strider' textnode to "Aragorn"
 
-  // hint: You can get a list of elements by tag name, such as 'aside'
+// hint: You can get a list of elements by tag name, such as 'aside'
 
 };
 
@@ -181,13 +198,13 @@ const beautifulStranger = () => {
 // ============
 const forgeTheFellowShip = () => {
 
-  // 1. create a new div with an id 'the-fellowship'
+// 1. create a new div with an id 'the-fellowship'
 
-  // 2. add an h1 with the text 'The Fellowship' to this new div
+// 2. add an h1 with the text 'The Fellowship' to this new div
 
-  // 3. append the fellowship to middle-earth
+// 3. append the fellowship to middle-earth
 
-  // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
+// 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
 
 };
 
@@ -199,11 +216,11 @@ const forgeTheFellowShip = () => {
 // ============
 const theBalrog = () => {
 
-  // 1. change the 'Gandalf' textNode to 'Gandalf the White'
+// 1. change the 'Gandalf' textNode to 'Gandalf the White'
 
-  // 2. add a class "the-white" to this element
+// 2. add a class "the-white" to this element
 
-  // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
+// 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
 
 };
 
@@ -215,11 +232,11 @@ const theBalrog = () => {
 // ============
 const hornOfGondor = () => {
 
-  // 1. create a pop-up alert that the horn of gondor has been blown
+// 1. create a pop-up alert that the horn of gondor has been blown
 
-  // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
+// 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
 
-  // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
+// 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
 
 };
 
@@ -231,9 +248,9 @@ const hornOfGondor = () => {
 // ============
 const itsDangerousToGoAlone = () => {
 
-  // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
+// 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
 
-  // 2. add a div with an id of 'mount-doom' to Mordor
+// 2. add a div with an id of 'mount-doom' to Mordor
 
 };
 
@@ -245,11 +262,11 @@ const itsDangerousToGoAlone = () => {
 // ============
 const weWantsIt = () => {
 
-  // 1. Create a div with an id of 'gollum' and add it to Mordor
+// 1. Create a div with an id of 'gollum' and add it to Mordor
 
-  // 2. Move the ring from Frodo and give it to Gollum
+// 2. Move the ring from Frodo and give it to Gollum
 
-  // 3. Move Gollum into Mount Doom
+// 3. Move Gollum into Mount Doom
 
 };
 
@@ -261,11 +278,11 @@ const weWantsIt = () => {
 // ============
 const thereAndBackAgain = () => {
 
-  // 1. remove Gollum and the Ring from the DOM
+// 1. remove Gollum and the Ring from the DOM
 
-  // 2. remove all the baddies from the DOM
+// 2. remove all the baddies from the DOM
 
-  // 3. Move all the hobbits back to the shire
+// 3. Move all the hobbits back to the shire
 
 };
 
@@ -282,18 +299,18 @@ const thereAndBackAgain = () => {
 
 $(() => {
 
-  $('#1').on('click', makeMiddleEarth);
-  $('#2').on('click', makeHobbits);
-  $('#3').on('click', keepItSecretKeepItSafe);
-  $('#4').on('click', makeBaddies);
-  $('#5').on('click', makeBuddies);
-  $('#6').on('click', leaveTheShire);
-  $('#7').on('click', beautifulStranger);
-  $('#8').on('click', forgeTheFellowShip);
-  $('#9').on('click', theBalrog);
-  $('#10').on('click', hornOfGondor);
-  $('#11').on('click', itsDangerousToGoAlone);
-  $('#12').on('click', weWantsIt);
-  $('#13').on('click', thereAndBackAgain);
+$('#1').on('click', makeMiddleEarth);
+$('#2').on('click', makeHobbits);
+$('#3').on('click', keepItSecretKeepItSafe);
+$('#4').on('click', makeBaddies);
+$('#5').on('click', makeBuddies);
+$('#6').on('click', leaveTheShire);
+$('#7').on('click', beautifulStranger);
+$('#8').on('click', forgeTheFellowShip);
+$('#9').on('click', theBalrog);
+$('#10').on('click', hornOfGondor);
+$('#11').on('click', itsDangerousToGoAlone);
+$('#12').on('click', weWantsIt);
+$('#13').on('click', thereAndBackAgain);
 
 });
