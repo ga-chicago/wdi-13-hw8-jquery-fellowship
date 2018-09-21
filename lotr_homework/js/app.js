@@ -37,6 +37,9 @@ const lands = [
 //           Chapters
 // ====================================
 
+
+
+
 // ============
 // Chapter 1
 // ============
@@ -79,10 +82,13 @@ const makeMiddleEarth = () => {
 
 };
 
-makeMiddleEarth();
+// makeMiddleEarth();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
+
+
+
 
 // ============
 // Chapter 2
@@ -103,7 +109,10 @@ const makeHobbits = () => {
 
   for (let i = 0; i < hobbits.length; i++){
 
-    const $li = $('<li class="hobbit"/>').text(hobbits[i]);
+    const $li = $('<li class="hobbit"/>');
+
+    $li.text(hobbits[i]);
+
     $ul.append($li);
   }
 
@@ -116,23 +125,39 @@ makeHobbits();
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
 
+
+
+
 // ============
 // Chapter 3
 // ============
 const keepItSecretKeepItSafe = () => {
 
-// 1. create an empty div with an id of 'the-ring'
+  console.log('Keep it Secret, Keep it Safe');
 
-// 2. add the ring as a child of Frodo
+  // 1. create an empty div with an id of 'the-ring'
 
-// hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
+  const oneRing = $('<div/>');
+  oneRing.attr('id','the-ring');
 
-// when you think you have given Frodo the ring, check in your Elements tab
+  // 2. add the ring as a child of Frodo
+  
+  $('li:contains("Frodo")').append(oneRing);
+
+
+  // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
+
+  // when you think you have given Frodo the ring, check in your Elements tab
 
 };
 
+keepItSecretKeepItSafe();
+
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
+
+
+
 
 // ============
 // Chapter 4
@@ -148,6 +173,9 @@ const makeBaddies = () => {
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
+
+
+
 
 // ============
 // Chapter 5
@@ -165,6 +193,9 @@ const makeBuddies = () => {
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
 
+
+
+
 // ============
 // Chapter 6
 // ============
@@ -179,6 +210,9 @@ const leaveTheShire = () => {
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
 
+
+
+
 // ============
 // Chapter 7
 // ============
@@ -192,6 +226,9 @@ const beautifulStranger = () => {
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
+
+
+
 
 // ============
 // Chapter 8
@@ -211,6 +248,9 @@ const forgeTheFellowShip = () => {
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
 
+
+
+
 // ============
 // Chapter 9
 // ============
@@ -226,6 +266,9 @@ const theBalrog = () => {
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 9 complete - Updated Gandalf"
+
+
+
 
 // ============
 // Chapter 10
@@ -243,6 +286,9 @@ const hornOfGondor = () => {
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
 
+
+
+
 // ============
 // Chapter 11
 // ============
@@ -256,6 +302,9 @@ const itsDangerousToGoAlone = () => {
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
+
+
+
 
 // ============
 // Chapter 12
@@ -272,6 +321,9 @@ const weWantsIt = () => {
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 12 complete - Gollum is trying to get the ring".
+
+
+
 
 // ============
 // Chapter 13
