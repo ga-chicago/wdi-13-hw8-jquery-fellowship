@@ -63,6 +63,8 @@ const makeMiddleEarth = () => {
   }
 };
 
+makeMiddleEarth();
+
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
 
@@ -92,6 +94,8 @@ const makeHobbits = () => {
 
 };
 
+makeHobbits();
+
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
 
@@ -110,6 +114,8 @@ const keepItSecretKeepItSafe = () => {
   // when you think you have given Frodo the ring, check in your Elements tab
 
 };
+
+keepItSecretKeepItSafe();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
@@ -132,6 +138,8 @@ const makeBaddies = () => {
 
   // 3. remember to append them to Mordor
 };
+
+makeBaddies();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
@@ -157,6 +165,8 @@ const makeBuddies = () => {
 
 };
 
+makeBuddies();
+
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
 
@@ -171,6 +181,8 @@ const leaveTheShire = () => {
 
 };
 
+leaveTheShire();
+
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
 
@@ -184,6 +196,8 @@ const beautifulStranger = () => {
   // hint: You can get a list of elements by tag name, such as 'aside'
 
 };
+
+beautifulStranger();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
@@ -205,6 +219,8 @@ const forgeTheFellowShip = () => {
   fellowship.append($('aside').children('ul'));
 };
 
+forgeTheFellowShip();
+
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
 
@@ -214,12 +230,14 @@ const forgeTheFellowShip = () => {
 const theBalrog = () => {
 
   // 1. change the 'Gandalf' textNode to 'Gandalf the White'
-
+  $('li:contains("Gandalf")').text("Gandalf the White");
   // 2. add a class "the-white" to this element
-
+  $('li:contains("Gandalf")').attr('class','the-white');
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
 
 };
+
+theBalrog();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 9 complete - Updated Gandalf"
