@@ -147,15 +147,23 @@ makeBaddies()
 // Chapter 5
 // ============
 const makeBuddies = () => {
-
-  // 1. create an aside tag and append it to middle-earth below mordor
-
+  const $aside = $('<aside/>');
+  const $ulBuddies = $('<ul/>');
   // 2. display an unordered list of buddies in the aside
-
+  $aside.append($ulBuddies);
+  // 1. create an aside tag and append it to middle-earth below mordor
+  $aside.insertAfter($('#Mordor'))
+  for(let i = 0; i < buddies.length; i++){
+    let $buddies = buddies[i];
+    const $liBuddies = $('<li/>');
   // 3. give each of the buddies a class of "buddy"
+    $liBuddies.attr('class', 'buddies');
+    $liBuddies.text($buddies);
+    $ulBuddies.append($liBuddies)
+  }
 
 };
-
+makeBuddies()
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
 
