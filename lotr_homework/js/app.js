@@ -65,12 +65,12 @@ for (let i = 0; i < lands.length; i++) {
 }
   //   3a. creates an article tag (there should be one for each land when the loop is done) done!
 
-  //   3b. gives each land article an `id` tag of the corresponding land name
+  //   3b. gives each land article an `id` tag of the corresponding land name. done!
 
-  //   3c. includes an h1 with the name of the land inside each land article
+  //   3c. includes an h1 with the name of the land inside each land article. done!
 
 
-  //   3d. appends each land to the middle-earth section
+  //   3d. appends each land to the middle-earth section. done!
 
 };
 makeMiddleEarth();
@@ -80,20 +80,23 @@ makeMiddleEarth();
 // ============
 // Chapter 2
 // ============
+
 const makeHobbits = () => {
 
   console.log('Make hobbits');
 
   // 1. display an unordered list of the hobbits in the shire.
-
+  $('#The-Shire').append('<ul/>')
   // 2. give each hobbit a class of "hobbit"
-
+  $('ul').append('<li class="hobbit">Frodo</li>')
+  $('ul').append('<li class="hobbit">Sam</li>')
+  $('ul').append('<li class="hobbit">Frodo</li>')
   // hint: create a 'ul' outside the loop upon which to append the 'li's
 
   // hint: get 'The-Shire' by using its id
 
 };
-
+makeHobbits();
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
 
@@ -103,7 +106,7 @@ const makeHobbits = () => {
 const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
-
+    
   // 2. add the ring as a child of Frodo
 
   // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
