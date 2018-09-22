@@ -112,13 +112,10 @@ const keepItSecretKeepItSafe = () => {
   const $theRing = $('<div/>')
   $theRing.attr('id', 'the-ring')
   // 2. add the ring as a child of Frodo
-  $theRing.appendTo($('li.hobbit').get(0))
-  
-  console.log($('li.hobbit').get(0));
+  $theRing.appendTo($('li.hobbit').get(0)) 
+  // console.log($('li.hobbit').get(0));
   // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
-
   // when you think you have given Frodo the ring, check in your Elements tab
-
 };
 keepItSecretKeepItSafe()
 // keepItSecretKeepItSafe()// COMMIT YOUR WORK
@@ -128,14 +125,21 @@ keepItSecretKeepItSafe()
 // Chapter 4
 // ============
 const makeBaddies = () => {
-
-  // 1. display an unordered list of baddies in Mordor
-
-  // 2. give each of the baddies a class of "baddy"
-
+  const $ulBaddies = $('<ul/>')
   // 3. remember to append them to Mordor
-};
+  $('#Mordor').append($ulBaddies)
+  // 1. display an unordered list of baddies in Mordor
+  for(let i = 0; i < baddies.length; i++){
+    let $baddies = baddies[i];
+    const $liBaddies = $('<li/>');
+  // 2. give each of the baddies a class of "baddy"
+    $liBaddies.attr('class', 'baddies');
+    $liBaddies.text($baddies);
+    $ulBaddies.append($liBaddies);
+  }
 
+};
+makeBaddies()
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
 
