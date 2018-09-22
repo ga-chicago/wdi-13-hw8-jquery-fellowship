@@ -90,7 +90,7 @@ const makeHobbits = () => {
   // 2. give each hobbit a class of "hobbit"
     let $hobbitsCheck = hobbits[i];
     const $liHobbits =  $('<li/>');
-    $liHobbits.attr("id", "hobbit");
+    $liHobbits.attr("class", "hobbit");
     $liHobbits.text($hobbitsCheck)
     $ulHobbits.append($liHobbits)
     // console.log($hobbitsCheck)
@@ -109,16 +109,19 @@ makeHobbits()
 const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
-
+  const $theRing = $('<div/>')
+  $theRing.attr('id', 'the-ring')
   // 2. add the ring as a child of Frodo
-
+  $theRing.appendTo($('li.hobbit').get(0))
+  
+  console.log($('li.hobbit').get(0));
   // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
 
   // when you think you have given Frodo the ring, check in your Elements tab
 
 };
-
-// COMMIT YOUR WORK
+keepItSecretKeepItSafe()
+// keepItSecretKeepItSafe()// COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
 
 // ============
