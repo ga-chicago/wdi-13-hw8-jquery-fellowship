@@ -95,7 +95,7 @@ const makeHobbits = () => {
     $ulHobbits.append($liHobbits)
     // console.log($hobbitsCheck)
   }
-  console.log($ulHobbits);
+  // console.log($ulHobbits);
   // hint: create a 'ul' outside the loop upon which to append the 'li's
   // hint: get 'The-Shire' by using its id
 };
@@ -173,7 +173,7 @@ makeBuddies()
 const leaveTheShire = () => {
 
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
-  $('#Rivendell').append($('#The-Shire')).children(1)
+  $('#Rivendell').append($('#The-Shire').children('ul'))
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
 };
