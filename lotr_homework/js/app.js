@@ -120,7 +120,7 @@ const makeHobbits = () => {
 
 };
 
-makeHobbits();
+// makeHobbits();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
@@ -151,7 +151,7 @@ const keepItSecretKeepItSafe = () => {
 
 };
 
-keepItSecretKeepItSafe();
+// keepItSecretKeepItSafe();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
@@ -199,11 +199,31 @@ const makeBaddies = () => {
 // ============
 const makeBuddies = () => {
 
-// 1. create an aside tag and append it to middle-earth below mordor
+  console.log('Makin\' buddies');
 
-// 2. display an unordered list of buddies in the aside
+  // 1. create an aside tag and append it to middle-earth below mordor
 
-// 3. give each of the buddies a class of "buddy"
+  const $aside = $('<aside/>');
+
+  // By below Mordor I'm assuming you mean below in the DOM tree? (Not the map?)
+  $('#Mordor').after($aside);
+
+  // 2. display an unordered list of buddies in the aside
+
+  // 3. give each of the buddies a class of "buddy"
+
+  $ul = $('<ul/>');
+
+  for (let i = 0; i < buddies.length; i++){
+
+    const $li = $('<li class="buddy"/>');
+
+    $li.text(buddies[i]);
+
+    $ul.append($li);
+  }
+
+  $aside.append($ul);
 
 };
 
@@ -218,7 +238,14 @@ const makeBuddies = () => {
 // ============
 const leaveTheShire = () => {
 
+  console.log('Leave the Shire');
+
 // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
+
+  const $ul = $('ul').has('.hobbit');
+
+  $('#Rivendell').append($ul);
+
 
 // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
