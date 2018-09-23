@@ -73,7 +73,8 @@ for (let i = 0; i < lands.length; i++) {
   //   3d. appends each land to the middle-earth section. done!
 
 };
-makeMiddleEarth();
+console.log(makeMiddleEarth())
+// makeMiddleEarth();
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
 
@@ -86,17 +87,19 @@ const makeHobbits = () => {
   console.log('Make hobbits');
 
   // 1. display an unordered list of the hobbits in the shire.
-  $('#The-Shire').append('<ul/>')
+  const ulHobbits = $('<ul/>')
+  $('#The-Shire').append(ulHobbits)
   // 2. give each hobbit a class of "hobbit"
-  $('ul').append('<li class="hobbit">Samwise "Sam" Gamgee</li>')
-  $('ul').append('<li class="hobbit">Meriadoc "Merry" Brandybuck</li>')
-  $('ul').append('<li class="hobbit">Peregrin "Pippin" Took</li>')
+  $(ulHobbits).append('<li class="hobbit">'+hobbits[2]+'</li>')
+  $(ulHobbits).append('<li class="hobbit">'+hobbits[1]+'</li>')
+  $(ulHobbits).append('<li class="hobbit">'+hobbits[0]+'</li>')
   // hint: create a 'ul' outside the loop upon which to append the 'li's  "Frodo Baggins",
 
   // hint: get 'The-Shire' by using its id
-
+// hobbits
 };
-makeHobbits();
+console.log(makeHobbits())
+// makeHobbits();
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
 
