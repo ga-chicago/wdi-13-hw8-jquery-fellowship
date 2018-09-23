@@ -111,7 +111,7 @@ console.log(makeHobbits())
 const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
-    $('.hobbit').append('<div class ="the-ring"></div>')
+    $('.hobbit:nth-child(1)').append('<div class ="the-ring"></div>')
   // 2. add the ring as a child of Frodo
 
   // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
@@ -217,13 +217,14 @@ console.log(forgeTheFellowShip())
 const theBalrog = () => {
 
   // 1. change the 'Gandalf' textNode to 'Gandalf the White'
+ $('.buddy:nth-child(1)').text('Gandalf the White').addClass('the-white')
 
   // 2. add a class "the-white" to this element
 
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
 
 };
-
+console.log(theBalrog())
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 9 complete - Updated Gandalf"
 

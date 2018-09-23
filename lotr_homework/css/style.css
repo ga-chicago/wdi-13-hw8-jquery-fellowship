@@ -140,8 +140,10 @@ ul {
 ul {
   list-style: none;
 }
-
-
+.the-white {
+  background-color: white;
+  border: 1px solid grey;
+}
 
 
 /*===========================================================*/
