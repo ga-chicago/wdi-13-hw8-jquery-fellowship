@@ -268,7 +268,7 @@ const beautifulStranger = () => {
 
 // 1. change the buddy 'Strider' textnode to "Aragorn"
 
-  $aragorn = $('li:contains("Strider")');
+  let $aragorn = $('li:contains("Strider")');
 
   $aragorn.text("Aragorn");
 
@@ -321,11 +321,20 @@ $theFellowship.append($('ul').has('li.buddy'));
 // ============
 const theBalrog = () => {
 
+  console.log("Fly, you FOOLS!");
+
 // 1. change the 'Gandalf' textNode to 'Gandalf the White'
+
+  let $gandalf = $('.buddy:contains("Gandalf the Grey")');
+  $gandalf.text("Gandalf the White");
 
 // 2. add a class "the-white" to this element
 
+  $gandalf.attr('class', 'buddy the-white');
+
 // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
+
+
 
 };
 
