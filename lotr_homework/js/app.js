@@ -335,7 +335,6 @@ const theBalrog = () => {
 // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
 
 
-
 };
 
 // COMMIT YOUR WORK
@@ -349,11 +348,21 @@ const theBalrog = () => {
 // ============
 const hornOfGondor = () => {
 
+  console.log("There is darkness there that never sleeps");
+
 // 1. create a pop-up alert that the horn of gondor has been blown
+
+  alert("The Horn of Gondor! \n \n ...Boromir!");
 
 // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
 
+  let $boromir = $('li:contains("Boromir")');
+  $boromir.css('text-decoration', 'line-through');
+
 // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
+
+  let $urukHai = $('li:contains("The Uruk-hai")');
+  $urukHai.remove();
 
 };
 
