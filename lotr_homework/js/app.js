@@ -47,7 +47,7 @@ const makeMiddleEarth = () => {
 
   // HINT: Make a console.log for each of your functions to make sure that, when you click, the correct function is being called!
 
-  console.log("Trying to make middle earth.");
+  console.log("Makin\' Middle Earth.");
 
   // 1. create a section tag with an id of middle-earth
 
@@ -201,7 +201,7 @@ const makeBaddies = () => {
 // ============
 const makeBuddies = () => {
 
-  console.log('Makin\' buddies');
+  console.log('Makin\' the buddies');
 
   // 1. create an aside tag and append it to middle-earth below mordor
 
@@ -286,7 +286,7 @@ const beautifulStranger = () => {
 // ============
 const forgeTheFellowShip = () => {
 
-  console.log("AND MY AXE!!");
+  console.log("...AND MY AXE!!");
 
 // 1. create a new div with an id 'the-fellowship'
 
@@ -348,7 +348,7 @@ const theBalrog = () => {
 // ============
 const hornOfGondor = () => {
 
-  console.log("There is darkness there that never sleeps");
+  console.log("There is darkness there that never sleeps.");
 
 // 1. create a pop-up alert that the horn of gondor has been blown
 
@@ -404,11 +404,22 @@ const itsDangerousToGoAlone = () => {
 // ============
 const weWantsIt = () => {
 
+  console.log("We wants it, we needs it. Must have the precious. They stole it from us. Sneaky little hobbitses. Wicked, tricksy, false!");
+
 // 1. Create a div with an id of 'gollum' and add it to Mordor
+
+  let $gollum = $('<div id="gollum"/>');
+  $gollum.text("Gollum");
+  $('#Mordor').append($gollum);
 
 // 2. Move the ring from Frodo and give it to Gollum
 
+  let $oneRing = $('#the-ring');
+  $gollum.append($oneRing);
+
 // 3. Move Gollum into Mount Doom
+
+  $('#mount-doom').append($gollum);
 
 };
 
