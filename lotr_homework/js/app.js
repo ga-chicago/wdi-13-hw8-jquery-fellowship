@@ -434,11 +434,21 @@ const weWantsIt = () => {
 // ============
 const thereAndBackAgain = () => {
 
+  console.log("Aragorn. Elessar...");
+
 // 1. remove Gollum and the Ring from the DOM
+
+  $('#gollum').remove();
 
 // 2. remove all the baddies from the DOM
 
+  let $baddies = $('ul').has('li.baddy');
+  $baddies.remove();
+
 // 3. Move all the hobbits back to the shire
+
+  let $heroes = $('.hobbit');
+  $('#The-Shire').append($heroes);
 
 };
 
