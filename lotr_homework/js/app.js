@@ -90,9 +90,9 @@ const makeHobbits = () => {
   const ulHobbits = $('<ul/>')
   $('#The-Shire').append(ulHobbits)
   // 2. give each hobbit a class of "hobbit"
-  $(ulHobbits).append('<li class="hobbit">'+hobbits[2]+'</li>')
-  $(ulHobbits).append('<li class="hobbit">'+hobbits[1]+'</li>')
-  $(ulHobbits).append('<li class="hobbit">'+hobbits[0]+'</li>')
+  for (let i = 0; i < hobbits.length; i++) {
+    $(ulHobbits).append('<li class="hobbit">'+hobbits[i]+'</li>')
+  }
   // hint: create a 'ul' outside the loop upon which to append the 'li's  "Frodo Baggins",
 
   // hint: get 'The-Shire' by using its id
@@ -130,10 +130,9 @@ const makeBaddies = () => {
   const ulBaddies = $('<ul/>')
   $('#Mordor').append(ulBaddies)
   // 2. give each hobbit a class of "hobbit"
-  $(ulBaddies).append('<li class="baddy">'+baddies[2]+'</li>')
-  $(ulBaddies).append('<li class="baddy">'+baddies[1]+'</li>')
-  $(ulBaddies).append('<li class="baddy">'+baddies[0]+'</li>')
-   $(ulBaddies).append('<li class="baddy">'+baddies[3]+'</li>')
+  for (let i = 0; i < baddies.length; i++) {
+    $(ulBaddies).append('<li class="baddy">'+baddies[i]+'</li>')
+  }
   // 2. give each of the baddies a class of "baddy"
 
   // 3. remember to append them to Mordor
@@ -154,12 +153,9 @@ $('#middle-earth').append(asBuddies)
 const ulBuddies = $('<ul/>')
 asBuddies.append(ulBuddies)
   // 3. give each of the buddies a class of "buddy"
-  $(ulBuddies).append('<li class="buddy">'+buddies[2]+'</li>')
-  $(ulBuddies).append('<li class="buddy">'+buddies[1]+'</li>')
-  $(ulBuddies).append('<li class="buddy">'+buddies[0]+'</li>')
-  $(ulBuddies).append('<li class="buddy">'+buddies[3]+'</li>')
-  $(ulBuddies).append('<li class="buddy">'+buddies[4]+'</li>')
-
+  for (let i = 0; i < buddies.length; i++){
+    $(ulBuddies).append('<li class="buddy">'+buddies[i]+'</li>')
+  }
 };
 console.log(makeBuddies())
 // COMMIT YOUR WORK
