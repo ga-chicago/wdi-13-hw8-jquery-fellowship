@@ -126,6 +126,13 @@ li.baddy {
   font-size: 15px;
 }
 
+li.buddy {
+  font-size: 15px;
+  max-height: 50px;
+  display: inline;
+  float:right;
+}
+
 .magic-imbued-jewelry {
   border-radius: 50%;
   border: 0.14em solid gold;
