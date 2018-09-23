@@ -377,9 +377,19 @@ const hornOfGondor = () => {
 // ============
 const itsDangerousToGoAlone = () => {
 
+  console.log("There's some good in this world, Mr. Frodo, and it's worth fighting for.");
+
 // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
 
+  let $frodo = $('li:contains("Frodo")');
+  let $sam = $('li:contains("Samwise")');
+
+  $('#Mordor').append($frodo);
+  $('#Mordor').append($sam);
+
 // 2. add a div with an id of 'mount-doom' to Mordor
+
+  $('h1:contains("Mordor")').after('<div id="mount-doom"/>');
 
 };
 
