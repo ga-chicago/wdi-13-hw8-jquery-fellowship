@@ -51,7 +51,7 @@ const makeMiddleEarth = () => {
   // console.log($middleEarth);
 
   // 2. append the section to the body of the DOM.
-  $('body').append($middleEarth);
+  $('body').prepend($middleEarth);
 
   // 3. use a for loop to iterate over the lands array that does the following:
   for(let i = 0; i < lands.length; i++)
@@ -63,6 +63,7 @@ const makeMiddleEarth = () => {
     $article.attr('id', lands[i]);
 
     let $land = $('<h1></h1>').text(lands[i]);
+    console.log($land);
     $article.append($land);
     $middleEarth.append($article);
 
@@ -84,8 +85,18 @@ const makeMiddleEarth = () => {
 const makeHobbits = () => {
 
   console.log('Make hobbits');
-
+  const $hobbitList = $('<ul></ul>');
   // 1. display an unordered list of the hobbits in the shire.
+for(let i = 0; i < hobbits.length; i++) {
+  let $hobbit = $('<li class="hobbit"></li>');
+
+  $hobbit.text(hobbits[i]);
+
+  $hobbitList.append($hobbit);
+
+};
+
+$('#The-Shire').append($hobbitList);
 
   // 2. give each hobbit a class of "hobbit"
 
