@@ -80,7 +80,7 @@ article li {
 
 /* The Shire */
 article:nth-child(1) {
-  top: 35%;
+  top: 23%;
   left: 21%;
 }
 
@@ -93,7 +93,7 @@ article:nth-child(2) {
 /* Mordor */
 article:nth-child(3) {
   left: 71%;
-  top: 81%;
+  top: 59%;
   background: url(../images/eye_of_sauron.png) no-repeat;
   background-position: 0em -0.9em;
   background-size: 7em;
@@ -119,6 +119,10 @@ ul {
 }
 
 li.hobbit {
+  font-size: 15px;
+}
+
+li.baddy {
   font-size: 15px;
 }
 
