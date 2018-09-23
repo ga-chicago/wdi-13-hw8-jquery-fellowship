@@ -66,15 +66,12 @@ const makeMiddleEarth = () => {
 }
 };
 // makeMiddleEarth();
-
-// makeMiddleEarth();
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
-
 // ============
 // Chapter 2
 // ============
-const makeHobbits = (makeMiddleEarth) => {
+const makeHobbits = () => {
 
   console.log('Make hobbits');
 
@@ -92,11 +89,7 @@ $('#The-Shire').append('<ul>hobbits</ul>');
 
    $('ul').append(li);
  }
-
-
-
-
-
+//worked!!!
 
  //secondtry//
  // const hobs = $('<ul></ul>');
@@ -106,23 +99,15 @@ $('#The-Shire').append('<ul>hobbits</ul>');
  //      const li = $('<li></li>');
  //      li.attr('class', 'hobbit');
  //      li.append('<li>' + hobbits[i] + '</li>');
-
  //      $('.hobbit').append('ul');
-
-
  //  }
-
-
 // //   --first try--//
 //   const hobs = $('<ul></ul>');
 //   $('article').append('hobs');
 //   for (let i = 0; i < hobbits.length; i ++){
-
 //       const li = $('<li class="hobbit"></li>');
 //       $('#The-Shire').append('<li>' + li[i] + '</li>');
-
 //       $('#hobbit').append('#The-Shire');
-
 // }
 //     // console.log(hobbits.length);
 };
@@ -136,9 +121,13 @@ makeHobbits();
 const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
+$('#middle-earth').append('<div id="the-ring"></div>');
+  
 
   // 2. add the ring as a child of Frodo
-
+$('li:contains("Frodo")').append("the-ring");
+//1st try
+// $('#the-ring').appendTo('.hobbit[0]');
   // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
 
   // when you think you have given Frodo the ring, check in your Elements tab
