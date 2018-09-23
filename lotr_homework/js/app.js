@@ -130,10 +130,10 @@ const makeBaddies = () => {
   const ulBaddies = $('<ul/>')
   $('#Mordor').append(ulBaddies)
   // 2. give each hobbit a class of "hobbit"
-  $(ulBaddies).append('<li class="hobbit">'+baddies[2]+'</li>')
-  $(ulBaddies).append('<li class="hobbit">'+baddies[1]+'</li>')
-  $(ulBaddies).append('<li class="hobbit">'+baddies[0]+'</li>')
-   $(ulBaddies).append('<li class="hobbit">'+baddies[3]+'</li>')
+  $(ulBaddies).append('<li class="baddy">'+baddies[2]+'</li>')
+  $(ulBaddies).append('<li class="baddy">'+baddies[1]+'</li>')
+  $(ulBaddies).append('<li class="baddy">'+baddies[0]+'</li>')
+   $(ulBaddies).append('<li class="baddy">'+baddies[3]+'</li>')
   // 2. give each of the baddies a class of "baddy"
 
   // 3. remember to append them to Mordor
@@ -148,13 +148,20 @@ console.log(makeBaddies())
 const makeBuddies = () => {
 
   // 1. create an aside tag and append it to middle-earth below mordor
-
+  const asBuddies = $('<aside/>')
+$('#middle-earth').append(asBuddies)
   // 2. display an unordered list of buddies in the aside
-
+const ulBuddies = $('<ul/>')
+asBuddies.append(ulBuddies)
   // 3. give each of the buddies a class of "buddy"
+  $(ulBuddies).append('<li class="buddy">'+buddies[2]+'</li>')
+  $(ulBuddies).append('<li class="buddy">'+buddies[1]+'</li>')
+  $(ulBuddies).append('<li class="buddy">'+buddies[0]+'</li>')
+  $(ulBuddies).append('<li class="buddy">'+buddies[3]+'</li>')
+  $(ulBuddies).append('<li class="buddy">'+buddies[4]+'</li>')
 
 };
-
+console.log(makeBuddies())
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
 
