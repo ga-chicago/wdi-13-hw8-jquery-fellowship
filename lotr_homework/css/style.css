@@ -12,6 +12,7 @@ h1 {
 
 #buttons {
     position: fixed;
+    z-index: 2;
     top: 20px;
     left: 20px;
 }
@@ -115,6 +116,10 @@ h1 {
 ul {
   margin: 0 0 0 0;
   text-shadow: 1px 1px #000000;
+}
+
+li.hobbit {
+  font-size: 15px;
 }
 
 .magic-imbued-jewelry {
