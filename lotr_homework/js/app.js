@@ -183,11 +183,11 @@ console.log(leaveTheShire())
 const beautifulStranger = () => {
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
-
+$('aside ul li:nth-child(4)').text('Aragorn')
   // hint: You can get a list of elements by tag name, such as 'aside'
 
 };
-
+console.log(beautifulStranger())
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
 
