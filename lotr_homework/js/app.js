@@ -75,7 +75,7 @@ for (let i = 0; i < lands.length; i++) {
 // return
 // makeMiddleEarth();
 };
-console.log(makeMiddleEarth())
+// console.log(makeMiddleEarth())
 // makeMiddleEarth();
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
@@ -100,7 +100,7 @@ for (let i = 0; i < hobbits.length; i++) {
   // hint: get 'The-Shire' by using its id
 // hobbits
 };
-console.log(makeHobbits())
+// console.log(makeHobbits())
 // makeHobbits();
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
@@ -119,7 +119,7 @@ $('.hobbit:nth-child(1)').append('<div class ="the-ring"></div>')
   // when you think you have given Frodo the ring, check in your Elements tab
 
 };
-console.log(keepItSecretKeepItSafe())
+// console.log(keepItSecretKeepItSafe())
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
 
@@ -139,7 +139,7 @@ for (let i = 0; i < baddies.length; i++) {
 
   // 3. remember to append them to Mordor
 };
-console.log(makeBaddies())
+// console.log(makeBaddies())
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
 
@@ -159,7 +159,7 @@ for (let i = 0; i < buddies.length; i++) {
     $(ulBuddies).append('<li class="buddy">' + buddies[i] + '</li>')
   }
 };
-console.log(makeBuddies())
+// console.log(makeBuddies())
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
 
@@ -172,7 +172,7 @@ $('#The-Shire ul').appendTo('#Rivendell')
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
 };
-console.log(leaveTheShire())
+// console.log(leaveTheShire())
 // console.log(leaveTheShire())
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
@@ -187,7 +187,7 @@ $('aside ul li:nth-child(4)').text('Aragorn')
   // hint: You can get a list of elements by tag name, such as 'aside'
 
 };
-console.log(beautifulStranger())
+// console.log(beautifulStranger())
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
 
@@ -207,7 +207,7 @@ $('#Rivendell ul').appendTo('#the-fellowship')
 $('aside ul').appendTo('#the-fellowship')
 
 };
-console.log(forgeTheFellowShip())
+// console.log(forgeTheFellowShip())
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
 
@@ -224,7 +224,7 @@ $('.buddy:nth-child(1)').text('Gandalf the White').addClass('the-white')
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
 
 };
-console.log(theBalrog())
+// console.log(theBalrog())
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 9 complete - Updated Gandalf"
 
@@ -241,7 +241,7 @@ alert("Boromir's been killed by the Uruk-Hai!","The horn of gondor")
 $('.baddy:nth-child(3)').remove()
 
 };
-console.log(hornOfGondor())
+// console.log(hornOfGondor())
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
 
@@ -256,7 +256,7 @@ $('.hobbit:nth-child(1)').appendTo('#Mordor')
 // 2. add a div with an id of 'mount-doom' to Mordor
 $('#Mordor').append('<div id="mount-doom"></div>')
 };
-console.log(itsDangerousToGoAlone())
+// console.log(itsDangerousToGoAlone())
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
 
@@ -273,7 +273,7 @@ $('.the-ring').appendTo('#gollum')
 $('#gollum').appendTo('#mount-doom')
 
 };
-console.log(weWantsIt())
+// console.log(weWantsIt())
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 12 complete - Gollum is trying to get the ring".
 
@@ -289,7 +289,7 @@ $('.baddy').remove()
   // 3. Move all the hobbits back to the shire
 $('.hobbit').appendTo('#The-Shire')
 };
-console.log(thereAndBackAgain())
+// console.log(thereAndBackAgain())
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 13 complete -Gollum and the ring are gone, the baddies are done, and the hobbits are back in the shire".
 
