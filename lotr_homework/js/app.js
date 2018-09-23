@@ -72,7 +72,9 @@ const makeMiddleEarth = () => {
     //   3c. includes an h1 with the name of the land inside each land article
     
     const $h1 = $('<h1/>')
+
     $h1.text(lands[i]);
+
     $article.append($h1);
 
     //   3d. appends each land to the middle-earth section
@@ -95,7 +97,7 @@ const makeMiddleEarth = () => {
 // ============
 const makeHobbits = () => {
 
-  console.log('Make hobbits');
+  console.log('Makin\' hobbits');
 
   // 1. display an unordered list of the hobbits in the shire.
 
@@ -105,7 +107,7 @@ const makeHobbits = () => {
 
   // hint: get 'The-Shire' by using its id
 
-  $ul = $('<ul/>');
+  let $ul = $('<ul/>');
 
   for (let i = 0; i < hobbits.length; i++){
 
@@ -164,7 +166,7 @@ const keepItSecretKeepItSafe = () => {
 // ============
 const makeBaddies = () => {
 
-  console.log('Making the baddies');
+  console.log('Makin\' the baddies');
 
 // 1. display an unordered list of baddies in Mordor
 
@@ -238,7 +240,7 @@ const makeBuddies = () => {
 // ============
 const leaveTheShire = () => {
 
-  console.log('Leave the Shire');
+  console.log('Leavin\' the Shire');
 
 // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
 
@@ -284,13 +286,27 @@ const beautifulStranger = () => {
 // ============
 const forgeTheFellowShip = () => {
 
+  console.log("AND MY AXE!!");
+
 // 1. create a new div with an id 'the-fellowship'
 
+let $theFellowship = $('<div id="the-fellowship"/>');
+
 // 2. add an h1 with the text 'The Fellowship' to this new div
+let $h1 = $('<h1/>');
+$h1.text("The Fellowship");
+
+$theFellowship.append($h1);
 
 // 3. append the fellowship to middle-earth
 
+$('#middle-earth').append($theFellowship);
+
 // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
+
+
+$theFellowship.append($('ul').has('li.hobbit'));
+$theFellowship.append($('ul').has('li.buddy'));
 
 };
 
