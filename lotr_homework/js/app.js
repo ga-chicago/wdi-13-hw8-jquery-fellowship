@@ -111,7 +111,7 @@ console.log(makeHobbits())
 const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
-    $('.hobbit').append('<div class ="the-ring"><div/>')
+    $('.hobbit').append('<div class ="the-ring"></div>')
   // 2. add the ring as a child of Frodo
 
   // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
@@ -197,15 +197,17 @@ console.log(beautifulStranger())
 const forgeTheFellowShip = () => {
 
   // 1. create a new div with an id 'the-fellowship'
-
+$('<div id ="the-fellowship"><h1>The Fellowship</h1></div>').appendTo('#middle-earth')
   // 2. add an h1 with the text 'The Fellowship' to this new div
 
   // 3. append the fellowship to middle-earth
 
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
+  $('#Rivendell ul').appendTo('#the-fellowship')
+  $('aside ul').appendTo('#the-fellowship')
 
 };
-
+console.log(forgeTheFellowShip())
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
 
