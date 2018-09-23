@@ -48,16 +48,16 @@ const makeMiddleEarth = () => {
 
   // 1. create a section tag with an id of middle-earth done!
 $('body').append('<section id="middle-earth"></section>')
-  // 2. append the section to the body of the DOM. done!
+// 2. append the section to the body of the DOM. done!
 //
-  // 3. use a for loop to iterate over the lands array that does the following: done!
+// 3. use a for loop to iterate over the lands array that does the following: done!
 for (let i = 0; i < lands.length; i++) {
     const article = $('<article/>')
-    
+
     article.attr('id', lands[i])
-    
-    article.append('<h1>'+lands[i]+'</h1>')
-    
+
+    article.append('<h1>' + lands[i] + '</h1>')
+
     $('#middle-earth').append(article);
      // $('article').append('<h1>"'+lands[i]+'"></h1>')
      //it loops through all the names but i need a single element for each h1
@@ -89,11 +89,11 @@ const makeHobbits = () => {
   console.log('Make hobbits');
 
   // 1. display an unordered list of the hobbits in the shire.
-  const ulHobbits = $('<ul/>')
-  $('#The-Shire').append(ulHobbits)
-  // 2. give each hobbit a class of "hobbit"
-  for (let i = 0; i < hobbits.length; i++) {
-    $(ulHobbits).append('<li class="hobbit">'+hobbits[i]+'</li>')
+const ulHobbits = $('<ul/>')
+$('#The-Shire').append(ulHobbits)
+// 2. give each hobbit a class of "hobbit"
+for (let i = 0; i < hobbits.length; i++) {
+    $(ulHobbits).append('<li class="hobbit">' + hobbits[i] + '</li>')
   }
   // hint: create a 'ul' outside the loop upon which to append the 'li's  "Frodo Baggins",
 
@@ -111,7 +111,7 @@ console.log(makeHobbits())
 const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
-    $('.hobbit:nth-child(1)').append('<div class ="the-ring"></div>')
+$('.hobbit:nth-child(1)').append('<div class ="the-ring"></div>')
   // 2. add the ring as a child of Frodo
 
   // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
@@ -129,12 +129,12 @@ console.log(keepItSecretKeepItSafe())
 const makeBaddies = () => {
 
   // 1. display an unordered list of baddies in Mordor
-  const ulBaddies = $('<ul/>')
-  $('#Mordor').append(ulBaddies)
-  // 2. give each hobbit a class of "hobbit"
-  for (let i = 0; i < baddies.length; i++) {
-    $(ulBaddies).append('<li class="baddy">'+baddies[i]+'</li>')
-  }
+const ulBaddies = $('<ul/>')
+$('#Mordor').append(ulBaddies)
+// 2. give each hobbit a class of "hobbit"
+for (let i = 0; i < baddies.length; i++) {
+    $(ulBaddies).append('<li class="baddy">' + baddies[i] + '</li>')
+}
   // 2. give each of the baddies a class of "baddy"
 
   // 3. remember to append them to Mordor
@@ -149,14 +149,14 @@ console.log(makeBaddies())
 const makeBuddies = () => {
 
   // 1. create an aside tag and append it to middle-earth below mordor
-  const asBuddies = $('<aside/>')
+const asBuddies = $('<aside/>')
 $('#middle-earth').append(asBuddies)
-  // 2. display an unordered list of buddies in the aside
+// 2. display an unordered list of buddies in the aside
 const ulBuddies = $('<ul/>')
 asBuddies.append(ulBuddies)
-  // 3. give each of the buddies a class of "buddy"
-  for (let i = 0; i < buddies.length; i++){
-    $(ulBuddies).append('<li class="buddy">'+buddies[i]+'</li>')
+// 3. give each of the buddies a class of "buddy"
+for (let i = 0; i < buddies.length; i++) {
+    $(ulBuddies).append('<li class="buddy">' + buddies[i] + '</li>')
   }
 };
 console.log(makeBuddies())
@@ -203,8 +203,8 @@ $('<div id ="the-fellowship"><h1>The Fellowship</h1></div>').appendTo('#middle-e
   // 3. append the fellowship to middle-earth
 
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
-  $('#Rivendell ul').appendTo('#the-fellowship')
-  $('aside ul').appendTo('#the-fellowship')
+$('#Rivendell ul').appendTo('#the-fellowship')
+$('aside ul').appendTo('#the-fellowship')
 
 };
 console.log(forgeTheFellowShip())
@@ -217,7 +217,7 @@ console.log(forgeTheFellowShip())
 const theBalrog = () => {
 
   // 1. change the 'Gandalf' textNode to 'Gandalf the White'
- $('.buddy:nth-child(1)').text('Gandalf the White').addClass('the-white')
+$('.buddy:nth-child(1)').text('Gandalf the White').addClass('the-white')
 
   // 2. add a class "the-white" to this element
 
@@ -234,11 +234,11 @@ console.log(theBalrog())
 const hornOfGondor = () => {
 
   // 1. create a pop-up alert that the horn of gondor has been blown
-// alert("Boromir's been killed by the Uruk-Hai!","The horn of gondor")
+alert("Boromir's been killed by the Uruk-Hai!","The horn of gondor")
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
 
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
-   $('.baddy:nth-child(3)').remove()
+$('.baddy:nth-child(3)').remove()
 
 };
 console.log(hornOfGondor())
@@ -251,10 +251,10 @@ console.log(hornOfGondor())
 const itsDangerousToGoAlone = () => {
 
   // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor) 
-  $('.hobbit:nth-child(1)').appendTo('#Mordor')
-  $('.hobbit:nth-child(1)').appendTo('#Mordor')
-  // 2. add a div with an id of 'mount-doom' to Mordor
-  $('#Mordor').append('<div id="mount-doom"></div>')
+$('.hobbit:nth-child(1)').appendTo('#Mordor')
+$('.hobbit:nth-child(1)').appendTo('#Mordor')
+// 2. add a div with an id of 'mount-doom' to Mordor
+$('#Mordor').append('<div id="mount-doom"></div>')
 };
 console.log(itsDangerousToGoAlone())
 // COMMIT YOUR WORK
