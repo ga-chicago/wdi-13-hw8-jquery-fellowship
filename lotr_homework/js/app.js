@@ -127,12 +127,18 @@ console.log(keepItSecretKeepItSafe())
 const makeBaddies = () => {
 
   // 1. display an unordered list of baddies in Mordor
-
+  const ulBaddies = $('<ul/>')
+  $('#Mordor').append(ulBaddies)
+  // 2. give each hobbit a class of "hobbit"
+  $(ulBaddies).append('<li class="hobbit">'+baddies[2]+'</li>')
+  $(ulBaddies).append('<li class="hobbit">'+baddies[1]+'</li>')
+  $(ulBaddies).append('<li class="hobbit">'+baddies[0]+'</li>')
+   $(ulBaddies).append('<li class="hobbit">'+baddies[3]+'</li>')
   // 2. give each of the baddies a class of "baddy"
 
   // 3. remember to append them to Mordor
 };
-
+console.log(makeBaddies())
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
 

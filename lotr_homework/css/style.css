@@ -137,7 +137,9 @@ ul {
   height: inherit;
   width: inherit;
 }
-
+ul {
+  list-style: none;
+}
 
 
 
