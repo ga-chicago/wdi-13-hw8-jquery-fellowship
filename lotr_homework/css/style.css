@@ -144,7 +144,9 @@ ul {
   background-color: white;
   border: 1px solid grey;
 }
-
+.buddy:nth-child(5) {
+  text-decoration: line-through;
+}
 
 /*===========================================================*/
 /* Responsive Layout Keeps Locales Correctly Oriented on Map */
