@@ -44,7 +44,7 @@ const makeMiddleEarth = () => {
 
   // HINT: Make a console.log for each of your functions to make sure that, when you click, the correct function is being called!
 
-  console.log("Trying to make middle earth.");
+  // console.log("Trying to make middle earth.");
 
   // 1. create a section tag with an id of middle-earth done!
 $('body').append('<section id="middle-earth"></section>')
@@ -71,7 +71,9 @@ for (let i = 0; i < lands.length; i++) {
 
 
   //   3d. appends each land to the middle-earth section. done!
-
+// console.log(makeMiddleEarth())
+// return
+// makeMiddleEarth();
 };
 console.log(makeMiddleEarth())
 // makeMiddleEarth();
@@ -165,13 +167,13 @@ console.log(makeBuddies())
 // Chapter 6
 // ============
 const leaveTheShire = () => {
-
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
-
+$('#The-Shire ul').appendTo('#Rivendell')
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
 };
-
+console.log(leaveTheShire())
+// console.log(leaveTheShire())
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
 
