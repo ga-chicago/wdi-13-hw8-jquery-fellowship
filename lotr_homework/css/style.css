@@ -13,8 +13,8 @@ h1 {
 #buttons {
     position: fixed;
     z-index: 2;
-    top: 20px;
-    left: 20px;
+    bottom: 20px;
+    left: 140px;
 }
 
 button {
@@ -90,6 +90,14 @@ article:nth-child(2) {
   top: 34%;
 }
 
+/*div.the-fellowship {
+  float:left;
+}*/
+
+div.the-fellowship {
+  text-align: center;
+}
+
 /* Mordor */
 article:nth-child(3) {
   left: 71%;
@@ -107,6 +115,8 @@ article:nth-child(3) h1:hover {
   color:black;
   text-shadow: 2px 2px 1px red;
 }
+
+
 
 h1 {
   font-size: 2.5em;

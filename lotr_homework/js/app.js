@@ -206,13 +206,12 @@ $('li:contains("Strider")').text("Aragorn");
 const forgeTheFellowShip = () => {
 
   // 1. create a new div with an id 'the-fellowship'
-
-  // 2. add an h1 with the text 'The Fellowship' to this new div
-
+$('body').append('<div id="the-fellowship"><h1 class="the-fellowship">The Fellowship</h1></div>');  // 2. add an h1 with the text 'The Fellowship' to this new div
   // 3. append the fellowship to middle-earth
 
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
-
+$('#Rivendell ul').appendTo('#the-fellowship');
+$('aside li').appendTo('#the-fellowship');
 };
 
 // COMMIT YOUR WORK
