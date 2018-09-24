@@ -47,20 +47,42 @@ const makeMiddleEarth = () => {
   console.log("Trying to make middle earth.");
 
   // 1. create a section tag with an id of middle-earth
-
+  const $body = $('body');
+  const $section = $('<section id="middle-earth"></section>');
+  const $article = $('<article></article>')
+  $body.append($section);
+  
+  
   // 2. append the section to the body of the DOM.
 
+  //check above
+
   // 3. use a for loop to iterate over the lands array that does the following:
+    
+
+    for (let i = 0; i < lands.length; i++){  
+      
+      $article.attr('id', lands[i]);
+      $article.append('<h1>' + lands[i] +'</h1>');
+      $section.append($article);
+  }
+};
+  //sorry, I dislike the comments between the loop. Makes it harder for me to read. 
 
   //   3a. creates an article tag (there should be one for each land when the loop is done)
 
+  //check
   //   3b. gives each land article an `id` tag of the corresponding land name
 
+  //check
   //   3c. includes an h1 with the name of the land inside each land article
 
+  //check
   //   3d. appends each land to the middle-earth section
 
-};
+
+
+makeMiddleEarth();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
@@ -71,17 +93,26 @@ const makeMiddleEarth = () => {
 const makeHobbits = () => {
 
   console.log('Make hobbits');
-
+  const $ul = $('<ul></ul>');
+  $('#The-Shire').append($ul);
   // 1. display an unordered list of the hobbits in the shire.
 
   // 2. give each hobbit a class of "hobbit"
+  for( let j = 0; j < hobbits.length; i++); {
+    let $hobbitLi = $('<li></li>');
+    $hobbitLi.text(hobbits[i]);
+    $hobbitLi.attr('class',"hobbits");
+    $ul.append(hobbitLi);
+
+  }
+
 
   // hint: create a 'ul' outside the loop upon which to append the 'li's
 
   // hint: get 'The-Shire' by using its id
 
 };
-
+makeHobbits();
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
 
