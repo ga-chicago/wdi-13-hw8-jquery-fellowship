@@ -24,7 +24,8 @@ const baddies = [
   "Sauron",
   "Saruman",
   "The Uruk-hai",
-  "Orcs"
+  "Orcs",
+  "Nazgûl"
 ];
 
 const lands = [
@@ -93,16 +94,16 @@ makeMiddleEarth();
 const makeHobbits = () => {
 
   console.log('Make hobbits');
-  const $ul = $('<ul></ul>');
-  $('#The-Shire').append($ul);
+  const $hobbitUl = $('<ul/>');
+  $('#The-Shire').append($hobbitUl);
   // 1. display an unordered list of the hobbits in the shire.
 
   // 2. give each hobbit a class of "hobbit"
   for( let j = 0; j < hobbits.length; i++); {
-    let $hobbitLi = $('<li></li>');
+    let $hobbitLi = $('<li/>');
     $hobbitLi.text(hobbits[i]);
     $hobbitLi.attr('class',"hobbits");
-    $ul.append(hobbitLi);
+    $hobbitUl.append(hobbitLi);
 
   }
 
@@ -122,16 +123,22 @@ makeHobbits();
 const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
-const theOneRing = $('<div></div>');
+const theOneRing = $('<div/>');
 theOneRing.attr('id','the-one-ring');
   // 2. add the ring as a child of Frodo
 $('li:contains("Frodo")').append(theOneRing);
+//I love li:contains. It is the bestest! Maybe... it's... the precious!!!!
+
+
+
   // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
 
   // when you think you have given Frodo the ring, check in your Elements tab
 
 };
 keepItSecretKeepItSafe();
+//Ash nazg thrakatulûk agh burzum-ishi krimpatul. AKA, call your functions.
+
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
 
@@ -139,6 +146,17 @@ keepItSecretKeepItSafe();
 // Chapter 4
 // ============
 const makeBaddies = () => {
+  const $baddiesUl = $('<ul/>')
+  $('#Mordor').append($baddiesUl);
+  for(let j = 0; i < baddies.length; i++) {
+    const $baddyLi = ('<li/>');
+    baddyLi.text(baddies[j]);
+    baddyLi.attr('class', "baddy");
+    $baddiesUl.append($baddyLi);
+  }
+
+
+
 
   // 1. display an unordered list of baddies in Mordor
 
@@ -147,6 +165,8 @@ const makeBaddies = () => {
   // 3. remember to append them to Mordor
 };
 
+makeBaddies();
+//I cannot believe you didn't put the freaking Nazgûl in the list of baddies. ALSO Sauron's name was totally Mairon, once. 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
 
