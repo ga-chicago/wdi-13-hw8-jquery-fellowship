@@ -181,7 +181,6 @@ const leaveTheShire = () => {
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
 $('#The-Shire ul').appendTo("#Rivendell");
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
-
 };
 
 // COMMIT YOUR WORK
@@ -193,7 +192,7 @@ $('#The-Shire ul').appendTo("#Rivendell");
 const beautifulStranger = () => {
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
-
+$('li:contains("Strider")').text("Aragorn");
   // hint: You can get a list of elements by tag name, such as 'aside'
 
 };
