@@ -223,11 +223,13 @@ leaveTheShire();
 const beautifulStranger = () => {
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
-
+  $('li:contains("Strider")').text("Aragorn");
+  //I love that you can just tack on stuff to other stuff
+  
   // hint: You can get a list of elements by tag name, such as 'aside'
 
 };
-
+beautifulStranger();
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
 
@@ -245,7 +247,7 @@ const forgeTheFellowShip = () => {
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
 
 };
-
+forgeTheFellowShip();
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
 
