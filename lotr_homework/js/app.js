@@ -148,9 +148,9 @@ keepItSecretKeepItSafe();
 const makeBaddies = () => {
   const $baddiesUl = $('<ul/>')
   $('#Mordor').append($baddiesUl);
-  for(let j = 0; i < baddies.length; i++) {
+  for(let i = 0; i < baddies.length; i++) {
     const $baddyLi = ('<li/>');
-    baddyLi.text(baddies[j]);
+    baddyLi.text(baddies[i]);
     baddyLi.attr('class', "baddy");
     $baddiesUl.append($baddyLi);
   }
@@ -175,6 +175,21 @@ makeBaddies();
 // ============
 const makeBuddies = () => {
 
+
+const $aside = $('<aside/>');
+ $('#middle-earth').append($aside)
+//I think this is right?
+const $buddyUl = $('<ul/>');
+$aside.append($buddyUl);
+for(let i = 0; i < buddies.length; i++); {
+  const $buddyLi = $('<li/>');
+  $buddyLi.text(buddies[i]);
+  $buddyLi.attr('class', "buddy");
+  $buddyUl.append($buddyLi);
+
+}
+
+
   // 1. create an aside tag and append it to middle-earth below mordor
 
   // 2. display an unordered list of buddies in the aside
@@ -182,6 +197,8 @@ const makeBuddies = () => {
   // 3. give each of the buddies a class of "buddy"
 
 };
+makeBuddies();
+//It's like making friends, but you actually get to make your friends. 
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
