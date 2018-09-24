@@ -283,13 +283,17 @@ theBalrog();
 const hornOfGondor = () => {
 
   // 1. create a pop-up alert that the horn of gondor has been blown
+  alert('Boromir has blown the horn of Gondor! If it be blown at need anywhere within the bounds of Gondor, as the realm was of old, its voice will not pass unheeded.');
+  $('li:contains("Boromir")').html('<strike>Boromir</strike>');
+  $('li:contains("Uruk-hai")').remove();
 
+  //oh noes boromir. 
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
 
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
 
 };
-
+hornOfGondor();
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
 
@@ -303,6 +307,7 @@ const itsDangerousToGoAlone = () => {
   // 2. add a div with an id of 'mount-doom' to Mordor
 
 };
+itsDangerousToGoAlone
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
