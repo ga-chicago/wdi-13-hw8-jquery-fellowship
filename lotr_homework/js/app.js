@@ -133,10 +133,15 @@ $('li.hobbit:first').append($ring);
 const makeBaddies = () => {
 
   // 1. display an unordered list of baddies in Mordor
-
+const $baddies = $('<ul></ul>');
   // 2. give each of the baddies a class of "baddy"
-
+for(let i = 0; i < baddies.length; i++) {
+  let $baddy = $('<li class="baddy"></li>');
+  $baddy.text(baddies[i]);
+  $baddies.append($baddy);
   // 3. remember to append them to Mordor
+}
+$('#Mordor').append($baddies);
 };
 
 // COMMIT YOUR WORK
