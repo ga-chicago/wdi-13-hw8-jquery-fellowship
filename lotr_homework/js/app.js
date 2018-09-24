@@ -225,7 +225,7 @@ const beautifulStranger = () => {
   // 1. change the buddy 'Strider' textnode to "Aragorn"
   $('li:contains("Strider")').text("Aragorn");
   //I love that you can just tack on stuff to other stuff
-  
+
   // hint: You can get a list of elements by tag name, such as 'aside'
 
 };
@@ -239,6 +239,15 @@ beautifulStranger();
 const forgeTheFellowShip = () => {
 
   // 1. create a new div with an id 'the-fellowship'
+  const $divFellowship = $('<div id="the-fellowship"></div>');
+  const $h1Fellowship = $('<h1>The Fellowship</h1>');
+  $divFellowship.append($h1Fellowship);
+  $('#middle-earth').append($divFellowship);
+
+  $divFellowship.append($('li.hobbit'));
+  $divFellowship.append($('li.buddy'));
+
+ 
 
   // 2. add an h1 with the text 'The Fellowship' to this new div
 
@@ -257,13 +266,14 @@ forgeTheFellowShip();
 const theBalrog = () => {
 
   // 1. change the 'Gandalf' textNode to 'Gandalf the White'
-
+   $('li:contains("Gandalf")').text("Gandalf the White");
   // 2. add a class "the-white" to this element
-
+  $('li:contains("Gandalf")').attr('class',"the-white");
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
 
 };
-
+theBalrog();
+// aka ME. 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 9 complete - Updated Gandalf"
 
