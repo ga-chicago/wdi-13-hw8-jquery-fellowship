@@ -139,7 +139,11 @@ ul {
   width: inherit;
 }
 
-
+.the-white {
+  background-color: white;
+  border: gray;
+  display: inline;
+}
 
 
 
