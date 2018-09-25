@@ -112,10 +112,10 @@ $('#The-Shire').append($hobbitList);
 // ============
 // Chapter 3
 // ============
+const $ring = $('<div id="the-ring"></div>');
 const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
-const $ring = $('<div id="the-ring"></div>');
   // 2. add the ring as a child of Frodo
 $('li.hobbit:first').append($ring);
   // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
@@ -265,7 +265,7 @@ const itsDangerousToGoAlone = () => {
   $('#Mordor').append($frodo);
   $('#Mordor').append($sam);
   // 2. add a div with an id of 'mount-doom' to Mordor
-  const $mountDoom = $('<div id="mount-doom"></div>');
+  const $mountDoom = $('<div id="mount-doom">Mount Doom</div>');
   $('#Mordor').append($mountDoom);
 };
 
@@ -278,10 +278,13 @@ const itsDangerousToGoAlone = () => {
 const weWantsIt = () => {
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
+  let $gollum = $('<div id="gollum">Gollum</div>');
 
+  $('#Mordor').append($gollum);
   // 2. Move the ring from Frodo and give it to Gollum
-
+  $gollum.append($ring);
   // 3. Move Gollum into Mount Doom
+  $('#mount-doom').append($gollum);
 
 };
 
