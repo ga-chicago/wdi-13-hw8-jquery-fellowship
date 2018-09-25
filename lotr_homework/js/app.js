@@ -130,10 +130,11 @@ $('li.hobbit:first').append($ring);
 // ============
 // Chapter 4
 // ============
+const $baddies = $('<ul></ul>');
 const makeBaddies = () => {
 
   // 1. display an unordered list of baddies in Mordor
-const $baddies = $('<ul></ul>');
+
   // 2. give each of the baddies a class of "baddy"
 for(let i = 0; i < baddies.length; i++) {
   let $baddy = $('<li class="baddy"></li>');
@@ -297,11 +298,11 @@ const weWantsIt = () => {
 const thereAndBackAgain = () => {
 
   // 1. remove Gollum and the Ring from the DOM
-
+  $('#gollum').remove();
   // 2. remove all the baddies from the DOM
-
+  $('.baddy').remove();
   // 3. Move all the hobbits back to the shire
-
+  $('#The-Shire').append($('.hobbit'));
 };
 
 // COMMIT YOUR WORK
