@@ -82,10 +82,10 @@ const makeMiddleEarth = () => {
 // ============
 // Chapter 2
 // ============
+const $hobbitList = $('<ul></ul>');
 const makeHobbits = () => {
 
   console.log('Make hobbits');
-  const $hobbitList = $('<ul></ul>');
   // 1. display an unordered list of the hobbits in the shire.
 for(let i = 0; i < hobbits.length; i++) {
   let $hobbit = $('<li class="hobbit"></li>');
@@ -150,11 +150,11 @@ $('#Mordor').append($baddies);
 // ============
 // Chapter 5
 // ============
+const $buddies = $('<ul></ul>');
 const makeBuddies = () => {
   const $aside = $('<aside/>');
   $('#Mordor').append($aside);
   // 1. create an aside tag and append it to middle-earth below mordor
-  const $buddies = $('<ul></ul>');
   for(let i = 0; i < buddies.length; i++) {
     let $buddy = $('<li class="buddy"></li>');
     $buddy.text(buddies[i]);
@@ -203,13 +203,14 @@ const beautifulStranger = () => {
 const forgeTheFellowShip = () => {
 
   // 1. create a new div with an id 'the-fellowship'
-
+  const $fellowship = $('<div id="the-fellowship"></div');
   // 2. add an h1 with the text 'The Fellowship' to this new div
-
+  $fellowship.append('<h1>The Fellowship</h1>');
   // 3. append the fellowship to middle-earth
-
+  $('#middle-earth').append($fellowship);
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
-
+  $fellowship.append($hobbitList);
+  $fellowship.append($buddies);
 };
 
 // COMMIT YOUR WORK
