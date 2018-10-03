@@ -138,13 +138,19 @@ ul {
   height: inherit;
   width: inherit;
 }
-
-
-
-
-
-
-
+ul {
+  list-style: none;
+}
+.the-white {
+  background-color: white;
+  border: 1px solid grey;
+}
+.buddy:nth-child(5) {
+  text-decoration: line-through;
+}
+li {
+  list-style: none;
+}
 /*===========================================================*/
 /* Responsive Layout Keeps Locales Correctly Oriented on Map */
 /*===========================================================*/
