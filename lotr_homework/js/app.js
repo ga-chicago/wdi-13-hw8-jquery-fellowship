@@ -238,12 +238,31 @@ const beautifulStranger = () => {
 const forgeTheFellowShip = () => {
 
   // 1. create a new div with an id 'the-fellowship'
+ 
+  let $theFellowship = $('<div id="the-fellowship" />');
 
-  // 2. add an h1 with the text 'The Fellowship' to this new div
+  // 2. add an h1 with the text 'The Fellowship' to this new div  
+
+  $theFellowship.append('<h1>The Fellowship</h1>');
 
   // 3. append the fellowship to middle-earth
 
+  let $middleEarth = document.getElementById('middleEarth');
+  $middleEarth.append($theFellowship);
+
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
+
+  let $hobbits = $('.hobbit')
+  console.log($hobbits);
+  let $buddies = $('.buddy')
+  console.log($buddies);
+  let $fellowshipList = $('<ul />');
+  $fellowshipList.append($hobbits);
+  $fellowshipList.append($buddies);
+  $theFellowship.append($fellowshipList);
+
+  console.log($theFellowship);
+
 
 };
 
