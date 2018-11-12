@@ -66,7 +66,7 @@ const makeMiddleEarth = () => {
 
   //   3a. creates an article tag (there should be one for each land when the loop is done)
 
-  
+
 
   //   3b. gives each land article an `id` tag of the corresponding land name
 
@@ -87,6 +87,18 @@ const makeHobbits = () => {
   console.log('Make hobbits');
 
   // 1. display an unordered list of the hobbits in the shire.
+
+  let $hobbitList = $('<ul/>');
+  $('#The-Shire').append($hobbitList);
+
+
+  for (i = 0; i < hobbits.length; i++) {
+    let $hobbitsID = $('<li>').attr('class', 'hobbit');
+    let $hobbitsIDName = $hobbitsID.append(hobbits[i]);
+    $hobbitList.append($hobbitsIDName);
+  }
+
+  console.log($hobbitList);
 
   // 2. give each hobbit a class of "hobbit"
 
