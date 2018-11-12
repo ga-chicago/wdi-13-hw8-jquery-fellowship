@@ -178,6 +178,18 @@ const makeBuddies = () => {
 
   // 3. give each of the buddies a class of "buddy"
 
+  let $pals = $('<ul/>');
+
+  let $buddyList = $('<aside/>').append($pals);
+
+  $('#middleEarth').append($buddyList);
+
+  for (i = 0; i < buddies.length; i++) {
+      let $palID = $('<li>').attr('class', 'buddy');
+      let $palIDName = $palID.append(buddies[i]);
+      $pals.append($palIDName);
+    }
+
 };
 
 // COMMIT YOUR WORK
