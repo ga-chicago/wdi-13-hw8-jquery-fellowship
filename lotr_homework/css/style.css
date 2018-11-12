@@ -139,6 +139,11 @@ ul {
   width: inherit;
 }
 
+.the-white {
+  background-color: white;
+  border: 3px solid gray;
+}
+
 
 
 
