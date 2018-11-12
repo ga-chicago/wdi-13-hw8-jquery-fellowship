@@ -247,7 +247,7 @@ const forgeTheFellowShip = () => {
 
   // 3. append the fellowship to middle-earth
 
-  let $middleEarth = document.getElementById('middleEarth');
+  let $middleEarth = $('#middleEarth');
   $middleEarth.append($theFellowship);
 
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
@@ -276,7 +276,13 @@ const theBalrog = () => {
 
   // 1. change the 'Gandalf' textNode to 'Gandalf the White'
 
+  $gandalf = $('li:contains("Gandalf")');
+  $gandalf.text('Gandalf the White');
+  console.log($gandalf);
+
   // 2. add a class "the-white" to this element
+
+  $gandalf.addClass('the-white');
 
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
 
