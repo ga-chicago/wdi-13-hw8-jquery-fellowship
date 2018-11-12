@@ -118,7 +118,7 @@ const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
 
-  let $oneRing = $('<div id="the-ring"></div>');
+  let $oneRing = $('<div id="the-ring" />');
   console.log($oneRing); 
 
   // 2. add the ring as a child of Frodo
@@ -334,7 +334,7 @@ const itsDangerousToGoAlone = () => {
 
   // 2. add a div with an id of 'mount-doom' to Mordor
 
-  $('#Mordor').append('<div id="Mount Doom" />');
+  $('#Mordor').append('<div id="mount-doom" />');
 
 };
 
@@ -348,9 +348,16 @@ const weWantsIt = () => {
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
 
+  $gollum = $('<div id="gollum" />')
+  $('#Mordor').append($gollum);
+
   // 2. Move the ring from Frodo and give it to Gollum
 
+  $gollum.append($('#the-ring'));
+
   // 3. Move Gollum into Mount Doom
+
+  $('#mount-doom').append($gollum);
 
 };
 
