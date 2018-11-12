@@ -298,9 +298,20 @@ const hornOfGondor = () => {
 
   // 1. create a pop-up alert that the horn of gondor has been blown
 
+  $alert = alert('Somebody blowin that old horn o Gondor');
+  $('#middleEarth').append($alert);
+
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
 
+  $boromir = $('li:contains("Boromir")');
+  console.log($boromir);
+  $boromir.css('text-decoration', 'line-through');
+
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
+
+  $urukHai = $('li:contains("Uruk")');
+  console.log($urukHai);
+  $urukHai.remove();
 
 };
 
