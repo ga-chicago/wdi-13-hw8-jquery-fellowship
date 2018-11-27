@@ -18,18 +18,22 @@ const makeMiddleEarth = () => {
   // HINT: Make a console.log for each of your functions to make sure that, when you click, the correct function is being called!
   console.log("Trying to make middle earth.");
   // 1. create a section tag with an id of middle-earth
-  const $body = $('body');
-  const $section = $('<section id="middle-earth"></section>');
+  const $middleEarth = $('<section id="middle-earth"></section>');
   
-  $body.prepend($section);
+  $('body').prepend($middleEarth);
   // 2. append the section to the body of the DOM.
   //check above
   // 3. use a for loop to iterate over the lands array that does the following:
   for (let i = 0; i < lands.length; i++) {
-    const $article = $('<article></article>')
+    const $article = $('<article></article>');
+
     $article.attr('id', lands[i]);
-    $article.append('<h1>' + lands[i] + '</h1>');
-    $section.append($article);
+
+    const $h1 = $('<h1></h1>');
+    $h1.text(lands[i]);
+    $article.append($h1);
+    // $article.append('<h1>' + lands[i] + '</h1>');
+    $middleEarth.append($article);
   }
 };
 //sorry, I dislike the comments between the loop. Makes it harder for me to read. 
